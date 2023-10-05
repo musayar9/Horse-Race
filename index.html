@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>At Yarışı</title>
+    <style>
+    
+      h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        color: green;
+        font-size: 64px;
+      
+      }
+    
+      .horse {
+        width: 150px;
+
+        z-index: 1;
+      }
+
+      #finish {
+        position: absolute;
+        top: 5px;
+        bottom: 5px;
+        left: 85%;
+        right: 0;
+        border-left: 5px solid #eee;
+        padding: 5px;
+        z-index: 0;
+        border-radius: 8px;
+      }
+
+      .raceArea {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+        position: relative;
+        border-radius: 12px;
+        gap: 5px;
+        background-image: url("images/floor.jpg");
+      }
+      .raceArea::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 12px;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      #startButton {
+        margin-top: 10px;
+        outline: none;
+        border: none;
+        padding: 10px 20px;
+        background: #007bff;
+        color: #fff;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      #startButton:disabled {
+        background: red;
+        cursor: not-allowed;
+      }
+
+      .result {
+        margin-top: 20px;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 10px auto;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 16px;
+        width: 80%;
+        background-color: orangered;
+        color: #fff;
+        display: none;
+      }
+      @media screen and (max-width: 768px) {
+        .horse {
+          width: 125px;
+        }
+        #finish {
+          left: 78%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>At Yarışı</h1>
+
+    <div class="raceArea">
+      <img src="images/horse1.gif" class="horse" id="horseOne" alt="horseOne" />
+      <img src="images/horse3.gif" class="horse" id="horseTwo" alt="horseTwo" />
+      <img
+        src="images/horse2.gif"
+        class="horse"
+        id="horseThree"
+        alt="horseThree"
+      />
+      <div id="finish"></div>
+    </div>
+
+    <div class="result"></div>
+    <button id="startButton">Yarışı Başlat</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
