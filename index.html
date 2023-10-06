@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>At Yarışı</title>
     <style>
-    
-      h1{
+      h1 {
         display: flex;
         align-items: center;
         justify-content: center;
         text-transform: capitalize;
         color: green;
         font-size: 64px;
-      
       }
-    
+
       .horse {
         width: 150px;
 
@@ -54,7 +52,7 @@
         background-color: rgba(0, 0, 0, 0.5);
       }
 
-      #startButton {
+      button {
         margin-top: 10px;
         outline: none;
         border: none;
@@ -64,7 +62,11 @@
         border-radius: 8px;
         cursor: pointer;
       }
-      #startButton:disabled {
+
+      #restart {
+        display: none;
+      }
+      button:disabled {
         background: red;
         cursor: not-allowed;
       }
@@ -90,6 +92,9 @@
           left: 78%;
         }
       }
+
+   
+ 
     </style>
   </head>
   <body>
@@ -109,6 +114,7 @@
 
     <div class="result"></div>
     <button id="startButton">Yarışı Başlat</button>
+    <button id="restart">Yeni Yarış</button>
 
     <script src="script.js"></script>
   </body>
