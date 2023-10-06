@@ -21,7 +21,7 @@ function race() {
 
     const interval = setInterval(function () {
       if (!raceFinished) {
-        var random = Math.floor(Math.random() * 50);
+        var random = Math.floor(Math.random() * 100);
         total = total + random;
         horse.style.marginLeft = total + "px";
         horse.style.transition = "all 1s ease";
