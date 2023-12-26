@@ -12,7 +12,7 @@ function startRace() {
   restart.disabled = true;
   result.style.display = "none";
   startButton.style.display = "none";
-  restart.innerText = "Yarış Başladı";
+  restart.innerText = "Race is started";
   restart.style.display = "flex";
   race();
 }
@@ -35,9 +35,9 @@ function race() {
         if (parseInt(horse.style.marginLeft) >= finishLine - 100) {
           raceFinished = true;
           clearInterval(interval);
-          result.innerText = `${horse.id} Yarışı kazandı`;
+          result.innerText = `${horse.id} race won`;
           restart.disabled = false;
-          restart.innerText = "Yeni Yarış";
+          restart.innerText = "New Race";
           restart.style.display = "flex";
           result.style.display = "block";
         }
